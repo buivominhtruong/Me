@@ -135,7 +135,99 @@ section {
     box-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff;
     transform: translateY(-5px);
 }
+/* Container Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+}
 
+/* Thẻ Card Project */
+.card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.5s all ease;
+    backdrop-filter: blur(10px);
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    border-color: #ff00ff;
+    box-shadow: 0 10px 30px rgba(255, 0, 255, 0.2);
+}
+
+/* Hình ảnh trong Card */
+.card-img {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.card:hover .card-img img {
+    transform: scale(1.1);
+}
+
+/* Thông tin Card */
+.card-info {
+    padding: 25px;
+}
+
+.card-info h3 {
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.card-info p {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* Tags công nghệ */
+.tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tags span {
+    background: rgba(0, 242, 255, 0.1);
+    color: #00f2ff;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    border: 1px solid #00f2ff;
+}
+
+/* Nút xem chi tiết */
+.view-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #ff00ff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.view-btn:hover {
+    background: #ff00ff;
+    box-shadow: 0 0 15px #ff00ff;
+}
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .about-container {
