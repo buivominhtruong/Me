@@ -175,3 +175,71 @@ section {
     box-shadow: 0 0 20px rgba(0, 242, 255, 0.5);
     transform: scale(1.05);
 }
+/* Tối ưu hóa cho thiết bị di động (Dưới 768px) */
+@media (max-width: 768px) {
+    /* Font chữ nhỏ lại một chút */
+    .neon-text {
+        font-size: 2.5rem;
+    }
+
+    /* Navbar Mobile */
+    .nav-list {
+        position: fixed;
+        top: 70px;
+        left: -100%; /* Ẩn menu sang bên trái */
+        flex-direction: column;
+        background: rgba(10, 10, 10, 0.95);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        padding: 40px 0;
+        backdrop-filter: blur(15px);
+    }
+
+    .nav-list.active {
+        left: 0; /* Hiện menu khi bấm nút */
+    }
+
+    .nav-list li {
+        margin: 20px 0;
+    }
+
+    /* Nút Hamburger */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-toggle .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background-color: #0ff;
+        box-shadow: 0 0 10px #0ff;
+        transition: 0.3s;
+    }
+
+    /* Bố cục About: Ảnh lên trên, Chữ xuống dưới */
+    .about-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .about-image {
+        width: 220px;
+        height: 220px;
+    }
+
+    /* Dự án: Chuyển về 1 cột */
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Ẩn nút Menu trên máy tính */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+}
